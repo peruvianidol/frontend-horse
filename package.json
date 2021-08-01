@@ -1,0 +1,26 @@
+{
+  "name": "11ty-starter",
+  "version": "1.0.0",
+  "description": "A basic boilerplate for getting a new Eleventy site up and running.",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "sass --watch _src/assets/scss:_site/assets/css --no-source-map",
+    "build:sass": "sass _src/assets/scss:_site/assets/css --no-source-map",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peruvianidol/11ty-starter.git"
+  },
+  "keywords": [],
+  "author": "Mike Aparicio <peruvianidol@gmail.com> (http://mikeaparicio.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.35.1"
+  }
+}
