@@ -34,6 +34,9 @@
     border-radius: $border-radius-small;
     padding: 3px;
   }
+  ::placeholder {
+    color: $color-text-subdued;
+  }
 }
 
 .#{$prefix}-container {

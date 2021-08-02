@@ -168,19 +168,23 @@ bodyClasses: fh-styles
       </div>
     </section>
 
-    <section data-grid-area="newsletter">
-      <figure>
-        <img src="/assets/images/mailbox.png" alt="Frontend Horse Mailbox">
-        <figcaption>
-          <h2>Fill your mailbox with frontend fun</h2>
-          <p>A weekly newsletter that demystifies the best CodePens, tutorials, and resources. It's always fun, free, and you can hang up your spurs any time.</p>
-          <form>
-            <input type="email" name="email" placeholder="Email">
-            <button type="submit">Subscribe</button>
-          </form>
-          <p><a href="">Check out past issues</a></p>
-        </figcaption>
-      </figure>
+    <section data-grid-area="newsletter" class="fh-inset-stretch-30">
+      <div class="fh-container fh-radius-large fh-surface-accent-light">
+        <figure class="fh-flex-row-40 fh-inset-stretch-80 fh-justify-center">
+          <div>
+            <img src="/assets/images/mailbox.png" alt="Frontend Horse Mailbox" style="max-width: 300px">
+          </div>
+          <figcaption class="fh-text-large" style="max-width: 452px;">
+            <h2 class="fh-heading-3 fh-text-accent fh-stack-20">Fill your mailbox with frontend fun</h2>
+            <p class="fh-stack-20">A weekly newsletter that demystifies the best CodePens, tutorials, and resources. It's always fun, free, and you can hang up your spurs any time.</p>
+            <form class="fh-stack-20 fh-flex-row-10">
+              <input type="email" name="email" placeholder="Email" class="fh-input">
+              <button type="submit" class="fh-button">Subscribe</button>
+            </form>
+            <p class="fh-text-subdued fh-text-inherit"><a href="">Check out past issues</a></p>
+          </figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 

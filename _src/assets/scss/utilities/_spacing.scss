@@ -20,6 +20,12 @@
   &-inset-stretch-40 {
     padding: $spacing-40 $spacing-20;
   }
+  &-inset-stretch-30 {
+    padding: $spacing-30 $spacing-20;
+  }
+  &-inset-stretch-80 {
+    padding: $spacing-80 $spacing-30;
+  }
   &-flow-30 > *:not([class*="#{$prefix}-stack"]) {
     margin-bottom: $spacing-30;
   }

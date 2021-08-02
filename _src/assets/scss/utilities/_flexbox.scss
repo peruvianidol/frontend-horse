@@ -22,6 +22,9 @@
   &-align-end {
     align-items: flex-end;
   }
+  &-justify-center {
+    justify-content: center;
+  }
   &-flex-row {
     &-10 > :not(:last-child) {
       margin-right: $spacing-10;

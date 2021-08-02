@@ -1,0 +1,8 @@
+.#{$prefix} {
+  &-surface-accent-light {
+    background-color: $color-background-accent-light;
+  }
+  &-radius-large {
+    border-radius: $border-radius-large;
+  }
+}
