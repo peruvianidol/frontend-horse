@@ -1,5 +1,6 @@
-[class*=#{prefix}-icon] {
+[class*=#{$prefix}-icon] {
   fill: currentColor;
+  display: inline-block;
 }
 
 .#{prefix}-icon {

@@ -21,7 +21,7 @@ bodyClasses: fh-styles
 
   <main data-grid-area="main">
     <section data-grid-area="hero" class="fh-flex-row-40 fh-container fh-inset-stretch-40 fh-align-start">
-      <div>
+      <div style="max-width: 500px">
         <h1 class="fh-heading-1 fh-text-brand-large fh-stack-20">Techniques to get you galloping</h1>
         <p class="fh-text-largest fh-stack-30">Learn frontend development tricks from some of the web's best creative developers.</p>
         <form class="fh-flex-row-10">
@@ -169,7 +169,7 @@ bodyClasses: fh-styles
     </section>
 
     <section data-grid-area="newsletter" class="fh-inset-stretch-30">
-      <div class="fh-container fh-radius-large fh-surface-accent-light">
+      <div class="fh-container fh-radius-large fh-surface-accent-light fh-stack-30">
         <figure class="fh-flex-row-40 fh-inset-stretch-80 fh-justify-center">
           <div>
             <img src="/assets/images/mailbox.png" alt="Frontend Horse Mailbox" style="max-width: 300px">
@@ -188,11 +188,11 @@ bodyClasses: fh-styles
     </section>
   </main>
 
-  <footer data-grid-area="footer">
-    <div>
+  <footer data-grid-area="footer" class="fh-surface-white">
+    <div class="fh-container fh-inset-stretch-30 fh-space-between">
       <img src="/assets/images/fh-logo.svg" width="160" height="59">
       <nav>
-        <ul>
+        <ul class="fh-flex-row-40 fh-text-accent fh-text-inherit fh-text-large" role="list">
           <li><a href="">Articles</a></li>
           <li><a href="">Newsletter</a></li>
           <li><a href="">Twitch</a></li>
@@ -201,14 +201,16 @@ bodyClasses: fh-styles
         </ul>
       </nav>
     </div>
-    <div>
-      <p>&copy; 2021, Alex Trost. All rights reserved.</p>
-      <ul>
-        <li><a href=""><svg width="24" height="24"><use xlink:href="#icon-twitter"></use></svg></a></li>
-        <li><a href=""><svg width="24" height="24"><use xlink:href="#icon-twitch"></use></svg></a></li>
-        <li><a href=""><svg width="24" height="24"><use xlink:href="#icon-discord"></use></svg></a></li>
-        <li><a href=""><svg width="24" height="24"><use xlink:href="#icon-youtube"></use></svg></a></li>
-      </ul>
+    <div class="fh-surface-accent">
+      <div class="fh-container fh-inset-stretch-30 fh-space-between">
+        <p class="fh-text-large">&copy; 2021, Alex Trost. All rights reserved.</p>
+        <ul class="fh-flex-row fh-text-inverse" role="list">
+          <li><a href=""><svg class="fh-icon-24" width="24" height="24"><use xlink:href="#icon-twitter"></use></svg></a></li>
+          <li><a href=""><svg class="fh-icon-24" width="24" height="24"><use xlink:href="#icon-twitch"></use></svg></a></li>
+          <li><a href=""><svg class="fh-icon-24" width="24" height="24"><use xlink:href="#icon-discord"></use></svg></a></li>
+          <li><a href=""><svg class="fh-icon-24" width="24" height="24"><use xlink:href="#icon-youtube"></use></svg></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 

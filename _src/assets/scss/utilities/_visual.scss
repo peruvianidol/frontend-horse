@@ -2,6 +2,13 @@
   &-surface-accent-light {
     background-color: $color-background-accent-light;
   }
+  &-surface-white {
+    background-color: $color-background-white;
+  }
+  &-surface-accent {
+    background-color: $color-background-accent;
+    color: $color-text-inverse;
+  }
   &-radius-large {
     border-radius: $border-radius-large;
   }

@@ -10,4 +10,18 @@
     color: $color-text-inverse;
     padding: $spacing-100 $spacing-20;
   }
+  [data-grid-area="newsletter"] {
+    border-bottom: $border-width-thin solid $color-border-default;
+  }
+  [data-grid-area="footer"] {
+    a, svg {
+      display: block;
+    }
+    .fh-surface-accent a:hover {
+      color: $color-text-accent-inverse;
+    }
+    .fh-text-accent a:hover {
+      color: $color-text-default;
+    }
+  }
 }
