@@ -1,0 +1,32 @@
+[class*="#{$prefix}-flex-row"],
+[class*="#{$prefix}-space-between"] {
+  display: flex;
+  align-items: center;
+
+  > :not(:last-child) {
+    margin-right: $spacing-20;
+  }
+}
+
+[class*="#{$prefix}-space-between"] {
+  justify-content: space-between;
+}
+
+.#{$prefix} {
+  &-align-start {
+    align-items: flex-start;
+  }
+  &-align-end {
+    align-items: flex-end;
+  }
+  &-flex-row {
+    &-10 > :not(:last-child) {
+      margin-right: $spacing-10;
+    }
+  }
+  &-flex-row {
+    &-40 > :not(:last-child) {
+      margin-right: $spacing-40;
+    }
+  }
+}

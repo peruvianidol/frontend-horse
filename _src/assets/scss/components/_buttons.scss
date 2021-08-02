@@ -1,0 +1,21 @@
+.#{$prefix} {
+  &-button {
+    appearance: none;
+    background-color: $button-background-color;
+    border-radius: $button-border-radius;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    padding: $button-padding;
+    border: none;
+    color: $button-text-color;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    transition: transform 350ms cubic-bezier(0.39, 1.61, 0.89, 1.22) 50ms, background-color 300ms ease-in-out 50ms;
+    &:hover {
+      transform: scale(1.06) rotate(1deg);
+    }
+    &:focus-visible {
+      outline: buttontext dotted 1px;
+    }
+  }
+}

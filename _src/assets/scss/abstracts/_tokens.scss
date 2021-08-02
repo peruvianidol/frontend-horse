@@ -1,0 +1,107 @@
+// all of your selectors will be prefixed with this.
+$prefix: fh;
+
+// Global Tokens
+
+$color-white:       hsl(0, 100%, 100%); // #dddddd
+$color-gray-200:    hsl(30, 6%, 90%);   // #e7e6e4
+$color-gray-600:    hsl(30, 6%, 45%);   // #7a736c
+$color-gray-700:    hsl(30, 6%, 25%);   // #44403c
+$color-red-400:     hsl(4, 99%, 65%);   // #fe594d
+$color-red-600:     hsl(4, 99%, 45%);   // #e41001
+$color-blue-600:    hsl(216, 74%, 33%); // #164892
+$color-yellow-100:  hsl(40, 82%, 98%);  // #fefbf5
+$color-yellow-400:  hsl(47, 95%, 56%);  // #f9cb25
+$color-green-200:   hsl(166, 48%, 86%); // #c9ece4
+
+$font-family-heading: 'Recoleta Bold', serif;
+$font-family-body: 'Poppins', sans-serif;
+$font-family-code: 'Menlo', monospace;
+
+$font-weight-regular: 400;
+$font-weight-bold: 800;
+
+$heading-font-size-largest: 5rem; // 80px
+$heading-font-size-large: 3.75rem; // 60px
+$heading-font-size-medium: 2.8125rem; // 45px
+$heading-font-size-small: 1.5625rem; // 25px
+$heading-font-size-smallest: 1.125rem; // 18px
+
+$heading-line-height: 1.1;
+
+$text-font-size-largest: 1.25rem; // 20px
+$text-font-size-large: 1.125rem; // 18px
+$text-font-size-medium: 1rem; // 16px
+$text-font-size-small: .875rem; // 14px
+
+$border-radius-large: 1.25rem;
+$border-radius-medium: .625rem;
+
+$border-width-thick: 2px;
+$border-width-thin: 1px;
+
+$spacing-10: .625rem;
+$spacing-15: .9375rem;
+$spacing-20: 1.25rem;
+$spacing-30: 1.875rem;
+$spacing-40: 2.5rem;
+$spacing-80: 5rem;
+$spacing-100: 6.25rem;
+
+$content-max-width: 1280px;
+
+// Contextual Tokens
+
+$color-text-default: $color-gray-700;
+$color-text-inverse: $color-yellow-100;
+$color-text-subdued: $color-gray-600;
+$color-text-brand: $color-red-600;
+$color-text-brand-large: $color-red-400;
+$color-text-accent: $color-blue-600;
+
+$color-background-default: $color-yellow-100;
+$color-background-brand: $color-red-600;
+$color-background-brand-light: $color-red-400;
+$color-background-white: $color-white;
+
+$color-border-brand: $color-red-400;
+$color-border-default: $color-gray-200;
+
+$color-icon-default: $color-text-default;
+$color-icon-inverse: $color-text-inverse;
+
+
+// Component Tokens
+
+$heading-1-font-size: $heading-font-size-largest;
+$heading-1-line-height: $heading-line-height;
+$heading-2-font-size: $heading-font-size-large;
+$heading-2-line-height: $heading-line-height;
+$heading-3-font-size: $heading-font-size-medium;
+$heading-3-line-height: $heading-line-height;
+$heading-4-font-size: $heading-font-size-small;
+$heading-4-line-height: $heading-line-height;
+$heading-5-font-size: $heading-font-size-smallest;
+$heading-5-line-height: $heading-line-height;
+
+
+$text-largest-font-size: $text-font-size-largest;
+$text-large-font-size: $text-font-size-large;
+$text-medium-font-size: $text-font-size-medium;
+$text-small-font-size: $text-font-size-small;
+
+$form-field-background-color: $color-background-white;
+$form-field-border: $border-width-thick solid $color-border-brand;
+$form-field-border-radius: $border-radius-medium;
+$form-field-font-size: $text-font-size-large;
+$form-field-line-height: 1.5;
+$form-field-padding: $spacing-15 $spacing-20;
+
+$button-background-color: $color-background-brand-light;
+$button-border-radius: $border-radius-medium;
+$button-font-size: $heading-font-size-small;
+$button-line-height: 1.2;
+$button-padding: $spacing-15 $spacing-20;
+$button-text-color: $color-text-inverse;
+$button-font-family: $font-family-heading;
+$button-font-weight: $font-weight-bold;

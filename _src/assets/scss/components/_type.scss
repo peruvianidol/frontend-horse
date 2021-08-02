@@ -1,0 +1,82 @@
+[class*="#{$prefix}-heading"] {
+  font-family: $font-family-heading;
+}
+
+.#{$prefix} {
+  &-heading-1 {
+    font-size: $heading-1-font-size;
+    line-height: $heading-1-line-height;
+  }
+  &-heading-2 {
+    font-size: $heading-2-font-size;
+    line-height: $heading-2-line-height;
+  }
+  &-heading-3 {
+    font-size: $heading-3-font-size;
+    line-height: $heading-3-line-height;
+  }
+  &-heading-4 {
+    font-size: $heading-4-font-size;
+    line-height: $heading-4-line-height;
+  }
+  &-heading-5 {
+    font-size: $heading-5-font-size;
+    line-height: $heading-5-line-height;
+  }
+  &-text-largest {
+    font-size: $text-largest-font-size;
+  }
+  &-text-large {
+    font-size: $text-large-font-size;
+  }
+  &-text-medium {
+    font-size: $text-medium-font-size;
+  }
+  &-text-small {
+    font-size: $text-small-font-size;
+  }
+  &-text-brand {
+    color: $color-text-brand;
+  }
+  &-text-brand-large {
+    color: $color-text-brand-large;
+  }
+  &-text-accent {
+    color: $color-text-accent;
+  }
+  &-text-subdued {
+    color: $color-text-subdued;
+  }
+  &-text-strong {
+    font-weight: $font-weight-bold;
+  }
+  &-text-right {
+    text-align: right;
+  }
+}
+.#{$prefix}-text-inherit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.#{$prefix}-text-brand {
+  color: $color-text-brand;
+}
+
+[class*=#{$prefix}-arrow-link] {
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  &:after {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: $icon-arrow-default;
+  }
+}
+.#{$prefix}-arrow-link-inverse:after {
+  background-image: $icon-arrow-inverse;
+}

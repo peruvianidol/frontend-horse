@@ -1,0 +1,8 @@
+.#{$prefix}-layout-home {
+  display: grid;
+  [data-grid-area="featured"] {
+    background-color: $color-background-brand-light;
+    color: $color-text-inverse;
+    padding: $spacing-100 $spacing-20;
+  }
+}

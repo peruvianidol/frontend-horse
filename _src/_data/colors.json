@@ -1,0 +1,62 @@
+[
+  {
+    "name" : "white",
+    "hsl" : "hsl(0, 100%, 100%)",
+    "hex" : "#ffffff",
+    "usage" : "backgrounds"
+  },
+  {
+    "name" : "gray-200",
+    "hsl" : "hsl(30, 6%, 90%)",
+    "hex" : "#e7e6e4",
+    "usage" : "borders, backgrounds"
+  },
+  {
+    "name" : "gray-600",
+    "hsl" : "hsl(30, 6%, 45%)",
+    "hex" : "#7a736c",
+    "usage" : "subdued text"
+  },
+  {
+    "name" : "gray-700",
+    "hsl" : "hsl(30, 6%, 25%)",
+    "hex" : "#44403c",
+    "usage" : "body text"
+  },
+  {
+    "name" : "red-400",
+    "hsl" : "hsl(4, 99%, 65%)",
+    "hex" : "#fe594d",
+    "usage" : "brand text, backgrounds, borders"
+  },
+  {
+    "name" : "red-600",
+    "hsl" : "hsl(4, 99%, 45%)",
+    "hex" : "#e41001",
+    "usage" : "brand text, backgrounds, borders"
+  },
+  {
+    "name" : "blue-600",
+    "hsl" : "hsl(216, 74%, 33%)",
+    "hex" : "#164892",
+    "usage" : "accent text, backgrounds"
+  },
+  {
+    "name" : "yellow-100",
+    "hsl" : "hsl(40, 82%, 98%)",
+    "hex" : "#fefbf5",
+    "usage" : "backgrounds, inverse text"
+  },
+  {
+    "name" : "yellow-400",
+    "hsl" : "hsl(47, 95%, 56%)",
+    "hex" : "#f9cb25",
+    "usage" : "inverse text on accent"
+  },
+  {
+    "name" : "green-200",
+    "hsl" : "hsl(30, 6%, 45%)",
+    "hex" : "#c9ece4",
+    "usage" : "alternate background"
+  }
+]

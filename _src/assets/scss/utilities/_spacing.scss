@@ -1,0 +1,26 @@
+.#{$prefix} {
+  &-stack-10 {
+    margin-bottom: $spacing-10;
+  }
+  &-stack-15 {
+    margin-bottom: $spacing-15;
+  }
+  &-stack-20 {
+    margin-bottom: $spacing-20;
+  }
+  &-stack-30 {
+    margin-bottom: $spacing-30;
+  }
+  &-stack-40 {
+    margin-bottom: $spacing-40;
+  }
+  &-inset-square-20 {
+    padding: $spacing-20;
+  }
+  &-inset-stretch-40 {
+    padding: $spacing-40 $spacing-20;
+  }
+  &-flow-30 > *:not([class*="#{$prefix}-stack"]) {
+    margin-bottom: $spacing-30;
+  }
+}

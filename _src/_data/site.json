@@ -1,7 +1,5 @@
 {
-  "name": "11ty Starter",
+  "name": "Frontend Stampede",
   "url": "localhost:8080",
-  "authorName": "Mike Aparicio",
-  "description": "A basic boilerplate for getting a new Eleventy site up and running.",
-  "favicon": "/assets/images/favicon.svg"
+  "description": "On this show, developers teach us frontend topics with a creative twist! We cover HTML, CSS, JS, React, Vue, Eleventy, Design Systems, and lots more."
 }
