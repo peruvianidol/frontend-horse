@@ -57,7 +57,7 @@ bodyClasses: fh-styles
   }
   [class*="space-"]:not(.space-list) {
     background-color: #fe594d; 
-    margin: 0 auto;
+    margin: 0 auto .25rem auto;
   }
   .space-10 {
     width: 10px;
@@ -79,208 +79,220 @@ bodyClasses: fh-styles
     width: 80px;
     height: 80px;
   }
+  .space-100 {
+    width: 100px;
+    height: 100px;
+  }
 </style>
 
-<main class="fh-inset-square-20 fh-text-largest fh-flow-30 doc-container">
-  <h1 class="fh-heading-2 fh-text-brand-large fh-stack-30">Frontend Horse Design System</h1>
+<main>
+  <article class="fh-inset-square-20 fh-text-largest fh-flow-30 doc-container">
+    <h1 class="fh-heading-2 fh-text-brand-large fh-stack-30">Frontend Horse Design System</h1>
 
-  <p><a href="/horse/">Frontend Horse</a></p>
+    <nav class="fh-flex-row">
+      <a href="/horse/">Frontend Horse</a>
+      <a href="https://github.com/peruvianidol/frontend-stampede">Github Repo</a>
+    </nav>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Visual Style Audit</h2>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Visual Style Audit</h2>
+    <p>A visual style audit will help us narrow down our design decisions into a manageable set of values and surface opportunities for accessibility and performance enhancements.</p>
 
-  <p>A visual style audit will help us narrow down our design decisions into a manageable set of values and surface opportunities for accessibility and performance enhancements.</p>
+    <ul class="fh-stack-30">
+      <li><a href="https://cssstats.com/stats?url=https%3A%2F%2Ffrontend.horse%2F">CSS Stats</a></li>
+      <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse Chrome Extension</a></li>
+      <li><a href="https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/">Lighthouse Firefox Extension</a></li>
+    </ul>
 
-  <ul class="fh-stack-30">
-    <li><a href="https://cssstats.com/stats?url=https%3A%2F%2Ffrontend.horse%2F">CSS Stats</a></li>
-    <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse Chrome Extension</a></li>
-    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/">Lighthouse Firefox Extension</a></li>
-  </ul>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Color</h2>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Color</h2>
+    <p>Color names include a numberic value. Much like font weights, these numbers help us distinguish the relative lightness between values more easily than with names alone. We can also make general rules about color pairings to ensure accessible color contrast ratios. Colors ending in <code>-600</code> or above will generally be accessible paired with colors ending in <code>-200</code> or below, while colors in between have very specific use cases.</p>
 
-  <p>Color names include a numberic value. Much like font weights, these numbers help us distinguish the relative lightness between values more easily than with names alone. We can also make general rules about color pairings to ensure accessible color contrast ratios. Colors ending in <code>-600</code> or above will generally be accessible paired with colors ending in <code>-200</code> or below, while colors in between have very specific use cases.</p>
+    <ul>
+      <li><a href="https://htmlcolors.com/color-converter">Color Converter</a></li>
+      <li><a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a></li>
+      <li><a href="https://codepen.io/peruvianidol/pen/1ef232a3401bca5717bb7d36d295fd4f">HSL Palette Generator</a></li>
+      <li><a href="https://contrast-grid.eightshapes.com/?background-colors=&foreground-colors=%23ffffff%2C%20white%0D%0A%23e7e6e4%2C%20gray-200%0D%0A%237a736c%2C%20gray-600%0D%0A%2344403c%2C%20gray-700%0D%0A%23fe594d%2C%20red-400%0D%0A%23e41001%2C%20red-600%0D%0A%23164892%2C%20blue-600%0D%0A%23FEFBF5%2C%20yellow-100%0D%0A%23f9cb25%2C%20yellow-400%0D%0A%23c9ece4%2C%20green-200%0D%0A&es-color-form__tile-size=compact">Contrast Grid</a></li>
+    </ul>
 
-  <ul>
-    <li><a href="https://htmlcolors.com/color-converter">Color Converter</a></li>
-    <li><a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a></li>
-    <li><a href="https://codepen.io/peruvianidol/pen/1ef232a3401bca5717bb7d36d295fd4f">HSL Palette Generator</a></li>
-    <li><a href="https://contrast-grid.eightshapes.com/?background-colors=&foreground-colors=%23ffffff%2C%20white%0D%0A%23e7e6e4%2C%20gray-200%0D%0A%237a736c%2C%20gray-600%0D%0A%2344403c%2C%20gray-700%0D%0A%23fe594d%2C%20red-400%0D%0A%23e41001%2C%20red-600%0D%0A%23164892%2C%20blue-600%0D%0A%23FEFBF5%2C%20yellow-100%0D%0A%23f9cb25%2C%20yellow-400%0D%0A%23c9ece4%2C%20green-200%0D%0A&es-color-form__tile-size=compact">Contrast Grid</a></li>
-  </ul>
+    <h3 class="fh-heading-4">Color Palette</h3>
 
-  <h3 class="fh-heading-4">Color Palette</h3>
+    <ul class="palette-list">
+    {% for color in colors %}
+      <li>
+        <figure class="fh-text-small">
+          <div style="background-color: {{ color.hex}}"></div>
+          <figcaption>
+            <strong class="fh-text-large">{{color.name}}</strong><br>
+            <span>{{ color.usage }}</span><br>
+            <span class="fh-text-subdued">{{ color.hsl }}</span><br>
+            <span class="fh-text-subdued">{{ color.hex }}</span>
+          </figcaption>
+        </figure>
+      </li>
+    {% endfor %}
+    </ul>
 
-  <ul class="palette-list">
-  {% for color in colors %}
-    <li>
-      <figure class="fh-text-small">
-        <div style="background-color: {{ color.hex}}"></div>
-        <figcaption>
-          <strong class="fh-text-large">{{color.name}}</strong><br>
-          <span>{{ color.usage }}</span><br>
-          <span class="fh-text-subdued">{{ color.hsl }}</span><br>
-          <span class="fh-text-subdued">{{ color.hex }}</span>
-        </figcaption>
-      </figure>
-    </li>
-  {% endfor %}
-  </ul>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Type</h2>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Type</h2>
+    <p>When creating type styles, the size values should be far enough apart to create a distinct heirarchy with as few sizes as possible. Heading sizes may overlap with body text sizes, but keep those instances to a minimum.</p>
 
-  <p>When creating type styles, the size values should be far enough apart to create a distinct heirarchy with as few sizes as possible. Heading sizes may overlap with body text sizes, but keep those instances to a minimum.</p>
+    <p>Frontend Horse's type styles only include font size and line height pairings. Heading styles use <span class="fh-heading-5">Recoleta 800</span> and text styles use <strong>Poppins 400</strong>. Colors and margins can be applied with utility classes, to further distinguish blocks of text.</p>
 
-  <p>Frontend Horse's type styles only include font size and line height pairings. Heading styles use <span class="fh-heading-5">Recoleta 800</span> and text styles use <strong>Poppins 400</strong>. Colors and margins can be applied with utility classes, to further distinguish blocks of text.</p>
+    <h3 class="fh-heading-4">Headings</h3>
 
-  <h3 class="fh-heading-4">Headings</h3>
+    <div class="fh-text-medium">
+    <p class="fh-heading-1 fh-text-brand-large">Techniques to get you galloping</p>
+    <p><span class="fh-heading-5">heading-1</span> <span class="fh-text-subdued">80px/88px</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-  <p class="fh-heading-1 fh-text-brand-large">Techniques to get you galloping</p>
-  <p><span class="fh-heading-5">heading-1</span> <span class="fh-text-subdued">80px/88px</span></p>
-  </div>
+    <div class="fh-text-medium">
+    <p class="fh-heading-2 fh-text-brand-large">Techniques to get you galloping</p>
+    <p><span class="fh-heading-5">heading-2</span> <span class="fh-text-subdued">60px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-  <p class="fh-heading-2 fh-text-brand-large">Techniques to get you galloping</p>
-  <p><span class="fh-heading-5">heading-2</span> <span class="fh-text-subdued">60px/</span></p>
-  </div>
+    <div class="fh-text-medium">
+    <p class="fh-heading-3 fh-text-brand-large">Techniques to get you galloping</p>
+    <p><span class="fh-heading-5">heading-3</span> <span class="fh-text-subdued">45px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-  <p class="fh-heading-3 fh-text-brand-large">Techniques to get you galloping</p>
-  <p><span class="fh-heading-5">heading-3</span> <span class="fh-text-subdued">45px/</span></p>
-  </div>
+    <div class="fh-text-medium">
+    <p class="fh-heading-4 fh-text-brand-large">Techniques to get you galloping</p>
+    <p><span class="fh-heading-5">heading-4</span> <span class="fh-text-subdued">25px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-  <p class="fh-heading-4 fh-text-brand-large">Techniques to get you galloping</p>
-  <p><span class="fh-heading-5">heading-4</span> <span class="fh-text-subdued">25px/</span></p>
-  </div>
+    <div class="fh-text-medium">
+    <p class="fh-heading-5 fh-text-brand">Techniques to get you galloping</p>
+    <p><span class="fh-heading-5">heading-5</span> <span class="fh-text-subdued">18px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-  <p class="fh-heading-5 fh-text-brand">Techniques to get you galloping</p>
-  <p><span class="fh-heading-5">heading-5</span> <span class="fh-text-subdued">18px/</span></p>
-  </div>
+    <h3 class="fh-heading-4">Body Text</h3>
 
-  <h3 class="fh-heading-4">Body Text</h3>
+    <div class="fh-text-medium">
+      <p class="fh-text-largest">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
+      <p><span class="fh-heading-5">text-largest</span> <span class="fh-text-subdued">20px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-    <p class="fh-text-largest">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-    <p><span class="fh-heading-5">text-largest</span> <span class="fh-text-subdued">20px/</span></p>
-  </div>
+    <div class="fh-text-medium">
+      <p class="fh-text-large">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
+      <p><span class="fh-heading-5">text-large</span> <span class="fh-text-subdued">18px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-    <p class="fh-text-large">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-    <p><span class="fh-heading-5">text-large</span> <span class="fh-text-subdued">18px/</span></p>
-  </div>
+    <div class="fh-text-medium">
+      <p class="fh-text-medium">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
+      <p><span class="fh-heading-5">text-medium</span> <span class="fh-text-subdued">16px/</span></p>
+    </div>  
 
-  <div class="fh-text-medium">
-    <p class="fh-text-medium">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-    <p><span class="fh-heading-5">text-medium</span> <span class="fh-text-subdued">16px/</span></p>
-  </div>  
+    <div class="fh-text-medium">
+      <p class="fh-text-small">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
+      <p><span class="fh-heading-5">text-small</span> <span class="fh-text-subdued">14px/</span></p>
+    </div>
 
-  <div class="fh-text-medium">
-    <p class="fh-text-small">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-    <p><span class="fh-heading-5">text-small</span> <span class="fh-text-subdued">14px/</span></p>
-  </div>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Spacing</h2>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Spacing</h2>
+    <p>As with type, we want our spacing values to be far enough apart to create a distinct heirarchy while using as few values as possible. Components have litle to no built-in spacing so that they can be reused in different contexts. Instead, we can apply space in the form of padding or margins using utility classes.</p>
 
-  <p>As with type, we want our spacing values to be far enough apart to create a distinct heirarchy while using as few values as possible. Components have litle to no built-in spacing so that they can be reused in different contexts. Instead, we can apply space in the form of padding or margins using utility classes.</p>
+    <ul>
+      <li><a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Space in Design Systems</a></li>
+      <li><a href="https://cube.fyi/">CUBE CSS</a></li>
+    </ul>
 
-  <ul>
-    <li><a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Space in Design Systems</a></li>
-    <li><a href="https://cube.fyi/">CUBE CSS</a></li>
-  </ul>
+    <h3 class="fh-heading-4">Spacing Scale</h3>
 
-  <h3 class="fh-heading-4">Spacing Scale</h3>
+    <ul class="space-list">
+      <li>
+        <div class="space-10"></div>
+        <p class="fh-heading-5">spacing-10</p>
+      </li>
+      <li>
+        <div class="space-15"></div>
+        <p class="fh-heading-5">spacing-15</p>
+      </li>
+      <li>
+        <div class="space-20"></div>
+        <p class="fh-heading-5">spacing-20</p>
+      </li>
+      <li>
+        <div class="space-40"></div>
+        <p class="fh-heading-5">spacing-40</p>
+      </li>
+      <li>
+        <div class="space-80"></div>
+        <p class="fh-heading-5">spacing-80</p>
+      </li>
+      <li>
+        <div class="space-100"></div>
+        <p class="fh-heading-5">spacing-100</p>
+      </li>
+    </ul>
 
-  <ul class="space-list">
-    <li>
-      <div class="space-10"></div>
-      <p class="fh-heading-5">spacing-10</p>
-    </li>
-    <li>
-      <div class="space-15"></div>
-      <p class="fh-heading-5">spacing-15</p>
-    </li>
-    <li>
-      <div class="space-20"></div>
-      <p class="fh-heading-5">spacing-20</p>
-    </li>
-    <li>
-      <div class="space-40"></div>
-      <p class="fh-heading-5">spacing-40</p>
-    </li>
-    <li>
-      <div class="space-80"></div>
-      <p class="fh-heading-5">spacing-80</p>
-    </li>
-  </ul>
+    <h3 class="fh-heading-4">Terminology</h3>
 
-  <h3 class="fh-heading-4">Terminology</h3>
+    <dl class="def-list">
+    <dt class="fh-heading-5">Stack</dt>
+    <dd>Stack refers to vertical margins. Our CSS only adds margins to the right and bottom of elements to prevent margin collapsing. You could also call this <em>block</em> to align with CSS logical properties.</dd>
 
-  <dl class="def-list">
-  <dt class="fh-heading-5">Stack</dt>
-  <dd>Stack refers to vertical margins. Our CSS only adds margins to the right and bottom of elements to prevent margin collapsing. You could also call this <em>block</em> to align with CSS logical properties.</dd>
+    <dt class="fh-heading-5">Flow</dt>
+    <dd>Rather than adding stack utilities to every element, we can apply a <code>flow</code> utility to their parent to apply a consistent bottom margin to each element in that container.</dd>
 
-  <dt class="fh-heading-5">Flow</dt>
-  <dd>Rather than adding stack utilities to every element, we can apply a <code>flow</code> utility to their parent to apply a consistent bottom margin to each element in that container.</dd>
+    <dt class="fh-heading-5">Inline</dt>
+    <dd>Inline refers to horizontal margins between elements.</dd>
 
-  <dt class="fh-heading-5">Inline</dt>
-  <dd>Inline refers to horizontal margins between elements.</dd>
+    <dt class="fh-heading-5">Inset</dt>
+    <dd>Inset refers to the padding of an element. You can further specify if an element should have <em>square</em> (equal on all sides), <em>squish</em> (less vertical padding than horizontal) or <em>stretch</em> (less horizontal padding than vertical).</dd>
+    </dl>
 
-  <dt class="fh-heading-5">Inset</dt>
-  <dd>Inset refers to the padding of an element. You can further specify if an element should have <em>square</em> (equal on all sides), <em>squish</em> (less vertical padding than horizontal) or <em>stretch</em> (less horizontal padding than vertical).</dd>
-  </dl>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Icons</h2>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Icons</h2>
+    <p>We can use an SVG sprite to call multiple instances of icons and style them independently with the <code>&lt;use&gt;</code> element. For components that use icons, we can URL encode them as background images to reduce the number of requests, baking them directly into our CSS.</p>
 
-  <p>We can use an SVG sprite to call multiple instances of icons and style them independently with the <code>&lt;use&gt;</code> element. For components that use icons, we can URL encode them as background images to reduce the number of requests, baking them directly into our CSS.</p>
+    <ul>
+      <li><a href="https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/">An Overview of SVG Sprite Creation Techniques</a></li>
+      <li><a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a></li>
+      <li><a href="https://yoksel.github.io/url-encoder/">SVG URL Encoder</a></li>
+    </ul>
 
-  <ul>
-    <li><a href="https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/">An Overview of SVG Sprite Creation Techniques</a></li>
-    <li><a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a></li>
-    <li><a href="https://yoksel.github.io/url-encoder/">SVG URL Encoder</a></li>
-  </ul>
+    <h3 class="fh-heading-4">Icon Set</h3>
 
-  <h3 class="fh-heading-4">Icon Set</h3>
+    <ul class="fh-flex-row icon-list">
+      <li>
+        <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-arrow"></use></svg>
+        <p class="fh-heading-5">arrow</p>
+      </li>
+      <li>
+        <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-discord"></use></svg>
+        <p class="fh-heading-5">discord</p>
+      </li>
+      <li>
+        <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-twitch"></use></svg>
+        <p class="fh-heading-5">twitch</p>
+      </li>
+      <li>
+        <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-twitter"></use></svg>
+        <p class="fh-heading-5">twitter</p>
+      </li>
+      <li>
+        <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-youtube"></use></svg>
+        <p class="fh-heading-5">youtube</p>
+      </li>
+    </ul>
 
-  <ul class="fh-flex-row icon-list">
-    <li>
-      <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-arrow"></use></svg>
-      <p class="fh-heading-5">arrow</p>
-    </li>
-    <li>
-      <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-discord"></use></svg>
-      <p class="fh-heading-5">discord</p>
-    </li>
-    <li>
-      <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-twitch"></use></svg>
-      <p class="fh-heading-5">twitch</p>
-    </li>
-    <li>
-      <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-twitter"></use></svg>
-      <p class="fh-heading-5">twitter</p>
-    </li>
-    <li>
-      <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-youtube"></use></svg>
-      <p class="fh-heading-5">youtube</p>
-    </li>
-  </ul>
-
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Design Tokens</h2>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Design Tokens</h2>
 
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Components</h2>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Components</h2>
 
-  <p>Through a combination of 
+    <p>Through a combination of 
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Utilities</h2>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Utilities</h2>
 
-  <p>
+    <p>
 
-  <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Layout</h2>
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Layout</h2>
 
-  <p>Rather than using a generic 12-column grid, we can create unique layouts for each page view, or smaller layouts that can be nested within, using CSS grid. Container queries will make it even easier to create responsive components within our layouts.</p>
+    <p>Rather than using a generic 12-column grid, we can create unique layouts for each page view, or smaller layouts that can be nested within, using CSS grid. Container queries will make it even easier to create responsive components within our layouts.</p>
 
-  <ul>
-    <li><a href="https://gridless.design/">Gridless Design</a></li>
-  </ul>
+    <ul>
+      <li><a href="https://gridless.design/">Gridless Design</a></li>
+    </ul>
+  </article>
 </main>

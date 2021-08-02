@@ -34,8 +34,9 @@ $text-font-size-large: 1.125rem; // 18px
 $text-font-size-medium: 1rem; // 16px
 $text-font-size-small: .875rem; // 14px
 
-$border-radius-large: 1.25rem;
-$border-radius-medium: .625rem;
+$border-radius-large: 1.25rem; // 20px
+$border-radius-medium: .625rem; // 10px
+$border-radius-small: .1875rem; // 3px
 
 $border-width-thick: 2px;
 $border-width-thin: 1px;
@@ -63,13 +64,13 @@ $color-background-default: $color-yellow-100;
 $color-background-brand: $color-red-600;
 $color-background-brand-light: $color-red-400;
 $color-background-white: $color-white;
+$color-background-code: $color-gray-200;
 
 $color-border-brand: $color-red-400;
 $color-border-default: $color-gray-200;
 
 $color-icon-default: $color-text-default;
 $color-icon-inverse: $color-text-inverse;
-
 
 // Component Tokens
 
@@ -83,7 +84,6 @@ $heading-4-font-size: $heading-font-size-small;
 $heading-4-line-height: $heading-line-height;
 $heading-5-font-size: $heading-font-size-smallest;
 $heading-5-line-height: $heading-line-height;
-
 
 $text-largest-font-size: $text-font-size-largest;
 $text-large-font-size: $text-font-size-large;
