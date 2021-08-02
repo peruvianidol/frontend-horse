@@ -13,6 +13,9 @@
 }
 
 .#{$prefix} {
+  &-flex-item {
+    flex: 1;
+  }
   &-align-start {
     align-items: flex-start;
   }
