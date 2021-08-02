@@ -23,14 +23,6 @@
     scroll-behavior: smooth;
   }
 
-  // :where(a[class]) {
-  //   text-decoration: none;
-  // }
-
-  // :where(a:not([class])) {
-  //   text-decoration-skip-ink: auto;
-  // }
-
   ul[role="list"],
   ol[role="list"] {
     list-style: none;

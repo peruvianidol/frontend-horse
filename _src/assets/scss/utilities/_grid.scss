@@ -1,6 +1,5 @@
 .#{$prefix}-grid {
-  --max-width: 470px;
-  --min-width: 306px;
+  --min-width: 300px;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(var(--min-width), 1fr));
   grid-template-rows: auto;
