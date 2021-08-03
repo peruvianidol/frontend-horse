@@ -23,10 +23,7 @@ title: Frontend Horse
       <div style="max-width: 500px">
         <h1>Techniques to get you galloping</h1>
         <p>Learn frontend development tricks from some of the web's best creative developers.</p>
-        <form>
-          <input type="email" name="email" placeholder="Email">
-          <button type="submit">Subscribe</button>
-        </form>
+        {% include 'form.html' %}
       </div>
       <div>
         <img src="/assets/images/fh-hero.png" alt="Funky horse-themed hero image">
@@ -37,44 +34,9 @@ title: Frontend Horse
       <div>
         <h2>Featured Articles</h2>
         <div>
-          <figure>
-            <img src="/assets/images/featured1.webp">
-            <figcaption>
-              <h3>Thinking Outside the Box with CSS Grid</h3>
-              <p>The support of CSS Grid in modern browsers has opened up layout possibilities like never before. We can create more complex designs with…</p>
-
-              <div>
-                <p>Featuring: Andy Barefoot</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/featured2.webp">
-            <figcaption>
-              <h3>Creating 3D Illustrations with CSS</h3>
-              <p>I love how CSS allows for so many different styles of drawing. From realistic portraits and landscapes like we saw with Ben Evans, to fun…</p>
-
-              <div>
-                <p>Featuring: Ricardo Oliva Alonso</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/featured3.webp">
-            <figcaption>
-              <h3>Creating Realistic Art with CSS</h3>
-              <p>It can be challenging enough to use CSS to match the exact layout you're going for, but could you imagine using it to paint a landscape? Or…</p>
-              
-              <div>
-                <p>Featuring: Ben Evans</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
+          {% for article in featured %}
+            {% include 'card.html' %}
+          {% endfor %}
         </div>
 
         <p><a href="">View all articles</a></p>
@@ -85,83 +47,9 @@ title: Frontend Horse
       <div>
         <h2>Recent Articles</h2>
         <div>
-          <figure>
-            <img src="/assets/images/recent1.webp">
-            <figcaption>
-              <h3>Concentric Circle Spinner</h3>
-              <p>I really enjoyed digging into this pen by Luke Richardville. You wouldn't think it had much to teach, seeing as it's only 12 lines of Pug…</p>
-
-              <div>
-                <p>Featuring: Luke Richardville</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/recent2.webp">
-            <figcaption>
-              <h3>Swimming on Scroll with GSAP</h3>
-              <p>There's something really beautiful about Weird Fishes by Michelle Barker. It's a tiny CodePen experience that's equal parts art piece and…</p>
-
-              <div>
-                <p>Featuring: Michelle Barker</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/featured1.webp">
-            <figcaption>
-              <h3>Thinking Outside the Box with CSS Grid</h3>
-              <p>The support of CSS Grid in modern browsers has opened up layout possibilities like never before. We can create more complex designs with…</p>
-
-              <div>
-                <p>Featuring: Andy Barefoot</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/recent4.webp">
-            <figcaption>
-              <h3>Sketchy Webcam Filter Effects</h3>
-              <p>Adam Kuhn makes some of my favorite CodePens, from the email form rollercoaster, to his gorgeous generative art, to his delightful…</p>
-
-              <div>
-                <p>Featuring: Adam Kuhn</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/recent5.webp">
-            <figcaption>
-              <h3>Buttons that Spark Joy</h3>
-              <p>Buttons are such a foundational part of any website that we often take them for granted. They're an iconic component in web design, but it's…</p>
-
-              <div>
-                <p>Featuring: Aaron Iker</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="/assets/images/recent6.webp">
-            <figcaption>
-              <h3>Making GIFs into Letters with Clip Paths</h3>
-              <p>The CSS clip-path is one of those features that unlocks so many possibilities once you understand how to use it. For his piece, Supa Dupa…</p>
-              
-              <div>
-                <p>Featuring: Ryan Mulligan</p>
-                <p><a href="">Read Article</a></p>
-              </div>
-            </figcaption>
-          </figure>
+          {% for article in recent %}
+            {% include 'card.html' %}
+          {% endfor %}
         </div>
         <p><a href="">View all articles</a></p>
       </div>
@@ -176,10 +64,7 @@ title: Frontend Horse
           <figcaption style="max-width: 452px;">
             <h2>Fill your mailbox with frontend fun</h2>
             <p>A weekly newsletter that demystifies the best CodePens, tutorials, and resources. It's always fun, free, and you can hang up your spurs any time.</p>
-            <form>
-              <input type="email" name="email" placeholder="Email">
-              <button type="submit">Subscribe</button>
-            </form>
+            {% include 'form.html' %}
             <p><a href="">Check out past issues</a></p>
           </figcaption>
         </figure>

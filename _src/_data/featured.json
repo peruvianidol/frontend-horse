@@ -1,0 +1,20 @@
+[
+  {
+    "title" : "Thinking Outside the Box with CSS Grid",
+    "description" : "The support of CSS Grid in modern browsers has opened up layout possibilities like never before. We can create more complex designs with…",
+    "guest" : "Andy Barefoot",
+    "image" : "/assets/images/featured1.webp"
+  },
+  {
+    "title" : "Creating 3D Illustrations with CSS",
+    "description" : "I love how CSS allows for so many different styles of drawing. From realistic portraits and landscapes like we saw with Ben Evans, to fun…",
+    "guest" : "Ricardo Oliva Alonso",
+    "image" : "/assets/images/featured2.webp"
+  },
+  {
+    "title" : "Creating Realistic Art with CSS",
+    "description" : "It can be challenging enough to use CSS to match the exact layout you're going for, but could you imagine using it to paint a landscape? Or…",
+    "guest" : "Ben Evans",
+    "image" : "/assets/images/featured3.webp"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "title" : "Concentric Circle Spinner",
+    "description" : "I really enjoyed digging into this pen by Luke Richardville. You wouldn't think it had much to teach, seeing as it's only 12 lines of Pug…",
+    "guest" : "Luke Richardville",
+    "image" : "/assets/images/recent1.webp"
+  },
+  {
+    "title" : "Swimming on Scroll with GSAP",
+    "description" : "There's something really beautiful about Weird Fishes by Michelle Barker. It's a tiny CodePen experience that's equal parts art piece and…",
+    "guest" : "Michelle Barker",
+    "image" : "/assets/images/recent2.webp"
+  },
+  {
+    "title" : "Thinking Outside the Box with CSS Grid",
+    "description" : "The support of CSS Grid in modern browsers has opened up layout possibilities like never before. We can create more complex designs with…",
+    "guest" : "Andy Barefoot",
+    "image" : "/assets/images/featured1.webp"
+  },
+  {
+    "title" : "Sketchy Webcam Filter Effects",
+    "description" : "Adam Kuhn makes some of my favorite CodePens, from the email form rollercoaster, to his gorgeous generative art, to his delightful…",
+    "guest" : "Adam Kuhn",
+    "image" : "/assets/images/recent4.webp"
+  },
+  {
+    "title" : "Buttons that Spark Joy",
+    "description" : "Buttons are such a foundational part of any website that we often take them for granted. They're an iconic component in web design, but it's…",
+    "guest" : "Aaron Iker",
+    "image" : "/assets/images/recent5.webp"
+  },
+  {
+    "title" : "Making GIFs into Letters with Clip Paths",
+    "description" : "The CSS clip-path is one of those features that unlocks so many possibilities once you understand how to use it. For his piece, Supa Dupa…",
+    "guest" : "Ryan Mulligan",
+    "image" : "/assets/images/recent6.webp"
+  }
+]
