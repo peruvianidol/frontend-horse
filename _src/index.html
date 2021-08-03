@@ -1,4 +1,5 @@
 ---
+title: Frontend Horse
 layout: base
 bodyClasses: fh-styles
 ---
@@ -35,6 +36,7 @@ bodyClasses: fh-styles
     font-family: "Recoleta Bold", serif;
   }
   .icon-list {
+    padding: 0 !important;
     list-style: none;
   }
   .icon-list li {
@@ -52,15 +54,24 @@ bodyClasses: fh-styles
   }
   .space-list {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min-content), 1fr);
     align-items: end;
-  }
-  .space-list li {
-    text-align: center;
+    justify-content: start;
+    padding: 0 !important;
   }
   [class*="space-"]:not(.space-list):not(.fh-space-between) {
     background-color: #fe594d; 
-    margin: 0 auto .25rem auto;
+    margin-bottom: .25rem;
+  }
+  @media (min-width: 700px) {
+    .space-list li {
+      text-align: center;
+    }
+    [class*="space-"]:not(.space-list):not(.fh-space-between) {
+      background-color: #fe594d; 
+      margin: 0 auto .25rem auto;
+    }
   }
   .space-10 {
     width: 10px;
@@ -148,7 +159,7 @@ bodyClasses: fh-styles
     <h3 class="fh-heading-4">Headings</h3>
 
     <div class="fh-text-medium">
-    <p class="fh-heading-1 fh-text-brand-large">Techniques to get you galloping</p>
+    <p class="fh-heading-1 fh-text-brand-large" style="overflow-wrap: break-word">Techniques to get you galloping</p>
     <p><span class="fh-heading-5">heading-1</span> <span class="fh-text-subdued">80px/88px</span></p>
     </div>
 
