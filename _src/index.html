@@ -53,18 +53,20 @@ bodyClasses: fh-styles
     list-style: none;
   }
   .space-list {
+    --min-width: 100px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(min-content), 1fr);
     align-items: end;
     justify-content: start;
-    padding: 0 !important;
   }
   [class*="space-"]:not(.space-list):not(.fh-space-between) {
     background-color: #fe594d; 
     margin-bottom: .25rem;
   }
   @media (min-width: 700px) {
+    .space-list {
+      grid-template-columns: repeat( auto-fit, minmax(var(--min-width), 1fr));
+    }
     .space-list li {
       text-align: center;
     }
@@ -216,7 +218,7 @@ bodyClasses: fh-styles
 
     <h3 class="fh-heading-4">Spacing Scale</h3>
 
-    <ul class="space-list">
+    <ul class="space-list" role="list">
       <li>
         <div class="space-10"></div>
         <p class="fh-heading-5">spacing-10</p>
