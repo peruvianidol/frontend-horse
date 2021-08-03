@@ -28,11 +28,19 @@ $heading-font-size-small: 1.5625rem; // 25px
 $heading-font-size-smallest: 1.125rem; // 18px
 
 $heading-line-height: 1.1;
+$text-line-height: 1.5;
 
 $text-font-size-largest: 1.25rem; // 20px
 $text-font-size-large: 1.125rem; // 18px
 $text-font-size-medium: 1rem; // 16px
 $text-font-size-small: .875rem; // 14px
+
+$spacing-10: .625rem;
+$spacing-15: .9375rem;
+$spacing-20: 1.25rem;
+$spacing-30: 1.875rem;
+$spacing-40: 2.5rem;
+$spacing-80: 5rem;
 
 $border-radius-large: 1.25rem; // 20px
 $border-radius-medium: .625rem; // 10px
@@ -41,13 +49,12 @@ $border-radius-small: .1875rem; // 3px
 $border-width-thick: 2px;
 $border-width-thin: 1px;
 
-$spacing-10: .625rem;
-$spacing-15: .9375rem;
-$spacing-20: 1.25rem;
-$spacing-30: 1.875rem;
-$spacing-40: 2.5rem;
-$spacing-80: 5rem;
-$spacing-100: 6.25rem;
+$timing-function-default: cubic-bezier(0.4, 0, 0.2, 1); 
+$duration-medium: 300ms;
+
+$scale-hover: 1.03;
+
+$box-shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
 $content-max-width: 1280px;
 
@@ -74,6 +81,8 @@ $color-border-default: $color-gray-200;
 
 $color-icon-default: $color-text-default;
 $color-icon-inverse: $color-text-inverse;
+
+$gutter: $spacing-20;
 
 // Component Tokens
 

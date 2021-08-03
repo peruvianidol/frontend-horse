@@ -40,6 +40,9 @@ bodyClasses: fh-styles
   .icon-list li {
     text-align: center;
   }
+  .def-list {
+    max-width: 55ch;
+  }
   .def-list dd {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -55,7 +58,7 @@ bodyClasses: fh-styles
   .space-list li {
     text-align: center;
   }
-  [class*="space-"]:not(.space-list) {
+  [class*="space-"]:not(.space-list):not(.fh-space-between) {
     background-color: #fe594d; 
     margin: 0 auto .25rem auto;
   }
@@ -90,7 +93,8 @@ bodyClasses: fh-styles
     <h1 class="fh-heading-2 fh-text-brand-large fh-stack-30">Frontend Horse Design System</h1>
 
     <nav class="fh-flex-row">
-      <a href="/horse/">Frontend Horse</a>
+      <a href="/pony/">Pony</a>
+      <a href="/horse/">Horse</a>
       <a href="https://github.com/peruvianidol/frontend-stampede">Github Repo</a>
     </nav>
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Visual Style Audit</h2>
@@ -148,44 +152,44 @@ bodyClasses: fh-styles
 
     <div class="fh-text-medium">
     <p class="fh-heading-2 fh-text-brand-large">Techniques to get you galloping</p>
-    <p><span class="fh-heading-5">heading-2</span> <span class="fh-text-subdued">60px/</span></p>
+    <p><span class="fh-heading-5">heading-2</span> <span class="fh-text-subdued">60px/66px</span></p>
     </div>
 
     <div class="fh-text-medium">
     <p class="fh-heading-3 fh-text-brand-large">Techniques to get you galloping</p>
-    <p><span class="fh-heading-5">heading-3</span> <span class="fh-text-subdued">45px/</span></p>
+    <p><span class="fh-heading-5">heading-3</span> <span class="fh-text-subdued">45px/49.5px</span></p>
     </div>
 
     <div class="fh-text-medium">
     <p class="fh-heading-4 fh-text-brand-large">Techniques to get you galloping</p>
-    <p><span class="fh-heading-5">heading-4</span> <span class="fh-text-subdued">25px/</span></p>
+    <p><span class="fh-heading-5">heading-4</span> <span class="fh-text-subdued">25px/27.5px</span></p>
     </div>
 
     <div class="fh-text-medium">
     <p class="fh-heading-5 fh-text-brand">Techniques to get you galloping</p>
-    <p><span class="fh-heading-5">heading-5</span> <span class="fh-text-subdued">18px/</span></p>
+    <p><span class="fh-heading-5">heading-5</span> <span class="fh-text-subdued">18px/19.8px</span></p>
     </div>
 
     <h3 class="fh-heading-4">Body Text</h3>
 
     <div class="fh-text-medium">
       <p class="fh-text-largest">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-      <p><span class="fh-heading-5">text-largest</span> <span class="fh-text-subdued">20px/</span></p>
+      <p><span class="fh-heading-5">text-largest</span> <span class="fh-text-subdued">20px/30px</span></p>
     </div>
 
     <div class="fh-text-medium">
       <p class="fh-text-large">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-      <p><span class="fh-heading-5">text-large</span> <span class="fh-text-subdued">18px/</span></p>
+      <p><span class="fh-heading-5">text-large</span> <span class="fh-text-subdued">18px/27px</span></p>
     </div>
 
     <div class="fh-text-medium">
       <p class="fh-text-medium">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-      <p><span class="fh-heading-5">text-medium</span> <span class="fh-text-subdued">16px/</span></p>
+      <p><span class="fh-heading-5">text-medium</span> <span class="fh-text-subdued">16px/24px</span></p>
     </div>  
 
     <div class="fh-text-medium">
       <p class="fh-text-small">Each month we invite four creative developers to build fun and whimsical site around a theme. Each week a developer builds out one component using a skill or technology they're an expert in.</p>
-      <p><span class="fh-heading-5">text-small</span> <span class="fh-text-subdued">14px/</span></p>
+      <p><span class="fh-heading-5">text-small</span> <span class="fh-text-subdued">14px/21px</span></p>
     </div>
 
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Spacing</h2>
@@ -219,10 +223,6 @@ bodyClasses: fh-styles
       <li>
         <div class="space-80"></div>
         <p class="fh-heading-5">spacing-80</p>
-      </li>
-      <li>
-        <div class="space-100"></div>
-        <p class="fh-heading-5">spacing-100</p>
       </li>
     </ul>
 
@@ -279,14 +279,77 @@ bodyClasses: fh-styles
 
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Design Tokens</h2>
 
+    <p>Design Tokens are a tech-agnostic method of storing our design decisions as key/value pairs &mdash; variables, basically. Tokens give us a shared vocabulary for describing visual style properties that translate across platforms. So while web, iOS and Android might use different values to express a color, when we are reviewing a design and talk about <code>$color-red-600</code>, we all know what that means.</p>
+
+    <p>Design Tokens allow anyone to make changes to their organization's visual styles without touching any production code. By using three layers of specificity, we can apply changes to our visual styles with varying amounts of precision.</p>
+
+    <h3 class="fh-heading-4">Global Tokens</h3>
+
+    <p>Global Tokens include all of the possible values in the system. The color palette, type scale, spacing values, etc. If we want to change the value of a color, we can do that here and it will change everywhere that token is used.</p>
+
+    <h3 class="fh-heading-4">Contextual Tokens</h3>
+
+    <p>Contextual Tokens describe how Global Tokens are used. They include common values that are used across multiple components, such as <code>$color-background-brand</code>. Contextual Tokens allow us to change the value of a token across multiple components.</p>
+
+    <h3 class="fh-heading-4">Component Tokens</h3>
+
+    <p>Component Tokens are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from red to blue, for example — without having to edit any CSS.</p>
+
+    <ul>
+      <li><a href="https://piccalil.li/tutorial/what-are-design-tokens/">What are design tokens?</a></li>
+      <li><a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a></li>
+    </ul>
 
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Components</h2>
 
-    <p>Through a combination of 
+    <p>We can distill a design down to the most atomic level of components. By combining component styles with utility classes, we can build complex new features with little to no extra styles.</p>
+
+    <p>The entire Frontend Horse homepage consists largely of text elements outlined above, as well as a text input, a button, and a card component. Everything else is done largely via the page layout and utility classes.</p>
+
+    <h3 class="fh-heading-4">Text Input</h3>
+
+    <input type="email" name="text-input" class="fh-input" placeholder="Email" style="max-width: 350px">
+
+    <h3 class="fh-heading-4">Button</h3>
+
+    <button class="fh-button">Push Me!</button>
+
+    <h3 class="fh-heading-4">Card</h3>
+
+    <p>The card styles only describe the container itself, including its border radius and background color. The contents within are styled with text and utility classes.</p>
+    
+    <p>By not scoping the styling of the card's content to its styles, we allow for a wide variety of content inside the cards without having to stay on top of evolving product decisions in a large organization.</p>
+
+    <figure class="fh-card" style="max-width: 350px">
+      <img src="/assets/images/featured1.webp">
+      <figcaption class="fh-inset-square-20">
+        <h3 class="fh-heading-4 fh-text-brand-large fh-stack-10">Thinking Outside the Box with CSS Grid</h3>
+        <p class="fh-stack-20 fh-text-large">The support of CSS Grid in modern browsers has opened up layout possibilities like never before. We can create more complex designs with…</p>
+
+        <div class="fh-space-between fh-align-end fh-text-small">
+          <p>Featuring: Andy Barefoot</p>
+          <p class="fh-text-inherit"><a href="" class="fh-arrow-link" style="box-shadow: none">Read Article</a></p>
+        </div>
+      </figcaption>
+    </figure>
 
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Utilities</h2>
 
-    <p>
+    <p>Utility classes are single-purpose classes that we can add to components to modify the default styles or arrange them with other components to build larger features.</p>
+
+    <p>Utility classes fall into three categories:</p>
+
+    <h3 class="fh-heading-4">Visual</h3>
+
+    <p>Visual utilities modify the default styles of a component.We can use them to apply different colors to text, backgrounds or borders based on our design tokens. They can also be used to apply styles such as border radius or text alignment.</p>
+
+    <h3 class="fh-heading-4">Spacing</h3>
+
+    <p>Spacing utilities allow you to apply padding and margins to elements to help distribute whitespace and create a clear visual hierarchy using the system's spacing values.</p>
+
+    <h3 class="fh-heading-4">Layout</h3>
+
+    <p>Layout utilities include flexbox and grid properties to organize groups of components. Not to be confused with page layouts, described below.</p>
 
     <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Layout</h2>
 
@@ -295,5 +358,41 @@ bodyClasses: fh-styles
     <ul>
       <li><a href="https://gridless.design/">Gridless Design</a></li>
     </ul>
+
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Design System Tips</h2>
+
+    <dl class="def-list">
+      <dt class="fh-heading-5">Start with design tools</dt>
+      <dd>It's extremely hard for a design system to get traction if it all lives in code. The sooner you can apply your system in design tools such as Figma, the more consistent deliverables will translate into the product, regardless of how far along the technical implementation is.</dd>
+
+      <dt class="fh-heading-5">Start small</dt>
+      <dd>It's easy to feel overwhelmed by the prospect of starting a design system. Start with one aspect of the visual styles, like color, before moving on to building out components.</dd>
+
+      <dt class="fh-heading-5">Let the product inform the system</dt>
+      <dd>Rather than making a checklist of things you want in the system, let the next feature on the roadmap inform what goes in the system. Each successive feature will be easier to build because you'll be able to leverage all the previous work on the system.</p>
+
+      <dt class="fh-heading-5">Sell the results not the system</dt>
+      <dd>As you are able to apply the system to the product, you'll see benefits in the form of increased consistency and productivity from both designers and developers. Rather than trying to sell the system itself to stakeholders, make the system a part of the process and the results will help you get more resources and broader adpotion of the system.</dd>
+
+      <dt class="fh-heading-5">A design system is a product, not a project</dt>
+      <dd>If you treat your design system as a project with a finite end date, the system will quickly fall out of date. A design system should ideally be treated as an internal product, with ongoing full- or part-time collaboration between design, engineering and product.</dd>
+
+      <dt class="fh-heading-5">Use the system as a trojan horse for accessibility and performance</dt>
+      <dd>If you have a hard time convincing the powers that be that accessibility and performance are as important as shipping new features, use the design system to subtly bake improvements into the system. It's better to ask forgiveness than permission, right?</dd>
+    </dl>
+
+    <h2 class="fh-heading-3 fh-stack-15 fh-text-accent">Additional Resources</h3>
+
+    <ul>
+      <li><a href="https://www.clarityconf.com/">Clarity Conference (Oct. 27&ndash;29, 2021)</a></li>
+      <li><a href="https://designsystemsrepo.com/">Design Systems Repo</a></li>
+      <li><a href="https://www.designsystems.com/">Design Systems (Figma)</li>
+      <li><a href="https://www.smashingmagazine.com/design-systems-book/">Design Systems by Alla Kholmatova</a></li>
+      <li><a href="https://abookapart.com/products/expressive-design-systems">Expressive Design Systems by Yesenia Perez-Cruz</a></li>
+      <li><a href="https://www.designbetter.co/design-systems-handbook">Design Systems Handbook by Marco Suarez, Jina Anne, Katie Sylor-Miller, Diana Mounter, and Roy Stanfield</a></li>
+      <li><a href="https://medium.com/@nathanacurtis">Nathan Curtis on Medium</a></li>
+
+
+      </ul>
   </article>
 </main>

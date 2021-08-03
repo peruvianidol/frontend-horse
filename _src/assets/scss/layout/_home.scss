@@ -3,12 +3,12 @@
   [data-grid-area="featured"] {
     background-color: $color-background-brand-light;
     color: $color-text-inverse;
-    padding: $spacing-100 $spacing-20;
+    padding: $spacing-80 $spacing-20;
   }
   [data-grid-area="recent"] {
     background-color: $color-background-accent;
     color: $color-text-inverse;
-    padding: $spacing-100 $spacing-20;
+    padding: $spacing-80 $spacing-20;
   }
   [data-grid-area="newsletter"] {
     border-bottom: $border-width-thin solid $color-border-default;

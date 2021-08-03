@@ -36,27 +36,6 @@
   &-text-small {
     font-size: $text-small-font-size;
   }
-  &-text-brand {
-    color: $color-text-brand;
-  }
-  &-text-brand-large {
-    color: $color-text-brand-large;
-  }
-  &-text-accent {
-    color: $color-text-accent;
-  }
-  &-text-accent-inverse {
-    color: $color-text-accent-inverse;
-  }
-  &-text-subdued {
-    color: $color-text-subdued;
-  }
-  &-text-strong {
-    font-weight: $font-weight-bold;
-  }
-  &-text-right {
-    text-align: right;
-  }
 }
 .#{$prefix}-text-inherit a {
   color: inherit;
