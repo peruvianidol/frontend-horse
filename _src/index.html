@@ -36,8 +36,12 @@ bodyClasses: fh-styles
     font-family: "Recoleta Bold", serif;
   }
   .icon-list {
-    padding: 0 !important;
-    list-style: none;
+    --min-width: 100px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(var(--min-width), 1fr));
+    gap: 20px;
+    align-items: end;
+    justify-content: start;
   }
   .icon-list li {
     text-align: center;
@@ -269,7 +273,7 @@ bodyClasses: fh-styles
 
     <h3 class="fh-heading-4">Icon Set</h3>
 
-    <ul class="fh-flex-row icon-list">
+    <ul class="icon-list" role="list">
       <li>
         <svg class="fh-icon-32" width="32" height="32"><use xlink:href="#icon-arrow"></use></svg>
         <p class="fh-heading-5">arrow</p>
