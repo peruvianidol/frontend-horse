@@ -1,0 +1,209 @@
+---
+title: Code Editor
+---
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 2rem;
+  }
+
+  .code-container {
+    position: relative;
+  }
+
+  #editing, #highlighting {
+    margin: 0;
+    padding: 16px;
+    border: 0;
+    width: 600px;
+    height: 12rem;
+    scrollbar-color: lime transparent;
+  }
+
+  .editing, .highlighting, .highlighting * {
+    font-size: 1rem;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+  }
+
+  .editing, .highlighting {
+  /*   position: absolute;
+    top: 0;
+    left: 0; */
+  }
+
+  .editing {
+    z-index: 10;
+  /*   color: transparent;
+    background-color: transparent;
+    caret-color: white; */
+    resize: none;
+  }
+
+  code[class*="language-"], pre[class*="language-"] {
+      white-space: normal !important;
+      word-break: break-word !important;
+  }
+
+  /* Syntax Highlighting from prism.js starts below, partly modified: */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: .4em .8em;
+    margin: .5em 0;
+    overflow: auto;
+    background: black;
+  }
+
+  code[class*="language-"] {
+    background: black;
+    color: white;
+    box-shadow: -.3em 0 0 .3em black, .3em 0 0 .3em black;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: .2em;
+    border-radius: .3em;
+    box-shadow: none;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #aaa;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: .7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol {
+    color: #0cf;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin {
+    color: yellow;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .token.variable,
+  .token.inserted {
+    color: yellowgreen;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: deeppink;
+  }
+
+  .token.regex,
+  .token.important {
+    color: orange;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .token.deleted {
+    color: red;
+  }
+
+  /* Plugin styles: Diff Highlight */
+  pre.diff-highlight.diff-highlight > code .token.deleted:not(.prefix),
+  pre > code.diff-highlight.diff-highlight .token.deleted:not(.prefix) {
+    background-color: rgba(255, 0, 0, .3);
+    display: inline;
+  }
+
+  pre.diff-highlight.diff-highlight > code .token.inserted:not(.prefix),
+  pre > code.diff-highlight.diff-highlight .token.inserted:not(.prefix) {
+    background-color: rgba(0, 255, 128, .3);
+    display: inline;
+  }
+
+  /* End of prism.js syntax highlighting*/
+</style>
+
+<div class="code-container">
+
+  <textarea id="editing" oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" class="editing" spellcheck="false"></textarea>
+
+  <pre id="highlighting" aria-hidden="true"><code class="language-html" id="highlighting-content" class="highlighting"></code></pre>
+  
+</div>
+
+<script>
+  function update(text) {
+    let result_element = document.querySelector("#highlighting-content");
+
+    if(text[text.length-1] == "\n") {
+      text += "<br>";
+    }
+    
+    result_element.innerHTML = text.replace(new RegExp("&", "g"), "&amp;").replace(new RegExp("<", "g"), "&lt;");
+
+    Prism.highlightElement(result_element);
+  }
+
+  function sync_scroll(element) {
+    /* Scroll result to scroll coords of event - sync with textarea */
+    let result_element = document.querySelector("#highlighting");
+    // Get and set x and y
+    result_element.scrollTop = element.scrollTop;
+    result_element.scrollLeft = element.scrollLeft;
+  }
+</script>
