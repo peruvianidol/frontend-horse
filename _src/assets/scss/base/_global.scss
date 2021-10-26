@@ -31,9 +31,10 @@
   }
   code {
     color: $color-text-inverse;
-    background-color: $color-background-code;
+    background-color: $color-background-inverse;
     border-radius: $border-radius-small;
-    padding: 3px;
+    padding: 3px 6px;
+    font-size: 1rem;
   }
 }
 

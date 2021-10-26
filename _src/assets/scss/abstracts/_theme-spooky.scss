@@ -12,10 +12,12 @@ $color-text-brand-large: $spooky-orange;
 $color-text-default: $color-yellow-100;
 $color-text-subdued: $color-green-200;
 $color-text-inverse: $spooky-black;
+$color-text-accent: $spooky-green;
 $color-text-accent-inverse: $spooky-green;
 $color-text-accent-light-subdued: $color-gray-600;
 
 $color-background-default: $spooky-black;
+$color-background-inverse: $color-yellow-100;
 $color-background-brand-light: $spooky-orange;
 $color-background-accent: $spooky-purple;
 
@@ -34,7 +36,9 @@ $recent-color-background: $spooky-purple;
 $recent-arrow-color: $icon-arrow-color;
 
 $newsletter-text-subdued: $color-text-accent-light-subdued;
+$newsletter-header-color: $color-blue-600;
 
 $footer-color-text: $color-text-default;
 $footer-icon-color-hover: $color-text-accent-inverse;
+$footer-link-color: $color-blue-600;
 $footer-link-color-hover: $color-gray-700;

@@ -73,7 +73,7 @@ $color-background-default: $color-yellow-100;
 $color-background-brand: $color-red-600;
 $color-background-brand-light: $color-red-400;
 $color-background-white: $color-white;
-$color-background-code: $color-gray-200;
+$color-background-inverse: $color-gray-700;
 $color-background-accent: $color-blue-600;
 $color-background-accent-light: $color-green-200;
 
@@ -127,7 +127,9 @@ $recent-arrow-color: $icon-arrow-color-inverse;
 
 $newsletter-color-text: $color-text-default;
 $newsletter-text-subdued: $color-text-accent-light-subdued;
+$newsletter-header-color: $color-text-accent;
 
 $footer-color-text: $color-text-inverse;
 $footer-icon-color-hover: $color-text-accent-inverse;
+$footer-link-color: $color-text-accent;
 $footer-link-color-hover: $color-gray-700;

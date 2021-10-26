@@ -26,6 +26,9 @@
     .fh-text-subdued {
       color: $newsletter-text-subdued;
     }
+    .fh-text-accent {
+      color: $newsletter-header-color;
+    }
   }
   [data-grid-area="footer"] {
     color: $footer-color-text;
@@ -34,6 +37,9 @@
     }
     .fh-surface-accent a:hover {
       color: $footer-icon-color-hover;
+    }
+    .fh-text-accent a {
+      color: $footer-link-color;
     }
     .fh-text-accent a:hover {
       color: $footer-link-color-hover;
