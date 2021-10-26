@@ -67,6 +67,7 @@ $color-text-brand: $color-red-600;
 $color-text-brand-large: $color-red-400;
 $color-text-accent: $color-blue-600;
 $color-text-accent-inverse: $color-yellow-400;
+$color-text-accent-light-subdued: $color-gray-600;
 
 $color-background-default: $color-yellow-100;
 $color-background-brand: $color-red-600;
@@ -79,8 +80,8 @@ $color-background-accent-light: $color-green-200;
 $color-border-brand: $color-red-400;
 $color-border-default: $color-gray-200;
 
-$color-icon-default: $color-text-default;
-$color-icon-inverse: $color-text-inverse;
+$icon-arrow-color: $color-gray-700;
+$icon-arrow-color-inverse: $color-yellow-100;
 
 $gutter: $spacing-20;
 
@@ -103,6 +104,8 @@ $text-medium-font-size: $text-font-size-medium;
 $text-small-font-size: $text-font-size-small;
 
 $form-field-background-color: $color-background-white;
+$form-field-text-color: $color-gray-700;
+$form-field-placeholder-color: $color-gray-600;
 $form-field-border: $border-width-thick solid $color-border-brand;
 $form-field-border-radius: $border-radius-medium;
 $form-field-font-size: $text-font-size-large;
@@ -117,3 +120,14 @@ $button-padding: $spacing-15 $spacing-20;
 $button-text-color: $color-text-inverse;
 $button-font-family: $font-family-heading;
 $button-font-weight: $font-weight-bold;
+
+$recent-color-background: $color-background-accent;
+$recent-color-text: $color-text-inverse;
+$recent-arrow-color: $icon-arrow-color-inverse;
+
+$newsletter-color-text: $color-text-default;
+$newsletter-text-subdued: $color-text-accent-light-subdued;
+
+$footer-color-text: $color-text-inverse;
+$footer-icon-color-hover: $color-text-accent-inverse;
+$footer-link-color-hover: $color-gray-700;

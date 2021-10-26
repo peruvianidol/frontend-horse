@@ -1,27 +1,42 @@
 .#{$prefix}-layout-home {
   display: grid;
+  [data-grid-area="hero"] {
+    justify-content: space-between;
+    img {
+      max-height: 575px;
+      margin: 0 auto;
+    }
+  }
   [data-grid-area="featured"] {
     background-color: $color-background-brand-light;
     color: $color-text-inverse;
     padding: $spacing-80 $spacing-20;
   }
   [data-grid-area="recent"] {
-    background-color: $color-background-accent;
-    color: $color-text-inverse;
+    background-color: $recent-color-background;
+    color: $recent-color-text;
     padding: $spacing-80 $spacing-20;
+    .fh-arrow-link-inverse:after {
+      background-color: $recent-arrow-color;
+    }
   }
   [data-grid-area="newsletter"] {
     border-bottom: $border-width-thin solid $color-border-default;
+    color: $newsletter-color-text;
+    .fh-text-subdued {
+      color: $newsletter-text-subdued;
+    }
   }
   [data-grid-area="footer"] {
+    color: $footer-color-text;
     a, svg {
       display: block;
     }
     .fh-surface-accent a:hover {
-      color: $color-text-accent-inverse;
+      color: $footer-icon-color-hover;
     }
     .fh-text-accent a:hover {
-      color: $color-text-default;
+      color: $footer-link-color-hover;
     }
   }
 }

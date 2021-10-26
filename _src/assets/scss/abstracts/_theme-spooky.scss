@@ -1,0 +1,40 @@
+/* Global Tokens */
+
+$spooky-black: hsl(0, 2%, 12%);
+$spooky-orange: hsl(20, 99%, 60%);
+$spooky-purple: hsl(278, 74%, 33%);
+$spooky-green: hsl(104, 95%, 56%);
+
+/* Contextual Tokens */
+
+$color-text-brand: $spooky-orange;
+$color-text-brand-large: $spooky-orange;
+$color-text-default: $color-yellow-100;
+$color-text-subdued: $color-green-200;
+$color-text-inverse: $spooky-black;
+$color-text-accent-inverse: $spooky-green;
+$color-text-accent-light-subdued: $color-gray-600;
+
+$color-background-default: $spooky-black;
+$color-background-brand-light: $spooky-orange;
+$color-background-accent: $spooky-purple;
+
+$color-border-brand: $spooky-orange;
+
+/* Component Tokens */
+
+$icon-arrow-color: $color-yellow-100;
+$icon-arrow-color-inverse: $spooky-black;
+
+$button-background-color: $color-background-brand-light;
+
+$form-field-border: $border-width-thick solid $color-border-brand;
+
+$recent-color-background: $spooky-purple;
+$recent-arrow-color: $icon-arrow-color;
+
+$newsletter-text-subdued: $color-text-accent-light-subdued;
+
+$footer-color-text: $color-text-default;
+$footer-icon-color-hover: $color-text-accent-inverse;
+$footer-link-color-hover: $color-gray-700;

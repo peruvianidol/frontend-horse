@@ -2,6 +2,7 @@
   &-input {
     appearance: none;
     background-color: $form-field-background-color;
+    color: $form-field-text-color;
     border: $form-field-border;
     border-radius: $form-field-border-radius;
     font-size: $form-field-font-size;
@@ -10,6 +11,9 @@
     padding: $form-field-padding;
     &:focus-visible {
       outline: buttontext dotted 1px;
+    }
+    &::placeholder {
+      color: $form-field-placeholder-color;
     }
   }
 }

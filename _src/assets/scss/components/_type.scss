@@ -57,9 +57,11 @@
     display: block;
     width: 1.5em;
     height: 1.5em;
-    background-image: $icon-arrow-default;
+    background-color: $icon-arrow-color;
+    -webkit-mask-image: $icon-arrow;
+    mask-image: $icon-arrow;
   }
 }
 .#{$prefix}-arrow-link-inverse:after {
-  background-image: $icon-arrow-inverse;
+  background-color: $icon-arrow-color-inverse;
 }
