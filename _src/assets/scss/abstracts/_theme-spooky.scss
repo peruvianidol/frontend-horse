@@ -1,17 +1,44 @@
-$spooky-black: hsl(60, 4.2%, 9.4%);
-$spooky-orange: hsl(19.6, 91%, 56.5%);
-$spooky-purple: hsl(281.1, 73.8%, 32.9%);
-$spooky-green: hsl(118, 94.7%, 55.9%);
+/* Global Tokens */
 
-$color-background-default: $spooky-black;
-$color-text-default: $color-yellow-100;
+$spooky-black: hsl(0, 2%, 12%);
+$spooky-orange: hsl(20, 99%, 60%);
+$spooky-purple: hsl(278, 74%, 33%);
+$spooky-green: hsl(104, 95%, 56%);
+
+/* Contextual Tokens */
+
 $color-text-brand: $spooky-orange;
 $color-text-brand-large: $spooky-orange;
-$color-background-brand-light: $spooky-orange;
-$button-background-color: $color-background-brand-light;
+$color-text-default: $color-yellow-100;
+$color-text-subdued: $color-green-200;
 $color-text-inverse: $spooky-black;
+$color-text-accent: $spooky-green;
+$color-text-accent-inverse: $spooky-green;
+$color-text-accent-light-subdued: $color-gray-600;
+
+$color-background-default: $spooky-black;
+$color-background-inverse: $color-yellow-100;
+$color-background-brand-light: $spooky-orange;
+$color-background-accent: $spooky-purple;
+
+$color-border-brand: $spooky-orange;
+
+/* Component Tokens */
+
 $icon-arrow-color: $color-yellow-100;
 $icon-arrow-color-inverse: $spooky-black;
-$color-background-accent: $spooky-purple;
-$recent-color-background: $color-background-accent;
-$color-text-accent-inverse: $spooky-green;
+
+$button-background-color: $color-background-brand-light;
+
+$form-field-border: $border-width-thick solid $color-border-brand;
+
+$recent-color-background: $spooky-purple;
+$recent-arrow-color: $icon-arrow-color;
+
+$newsletter-text-subdued: $color-text-accent-light-subdued;
+$newsletter-header-color: $color-blue-600;
+
+$footer-color-text: $color-text-default;
+$footer-icon-color-hover: $color-text-accent-inverse;
+$footer-link-color: $color-blue-600;
+$footer-link-color-hover: $color-gray-700;
